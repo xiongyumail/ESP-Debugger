@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:Down-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -20,17 +19,6 @@ U 5D39DEA8
 F0 "POWER" 50
 F1 "POWER.sch" 50
 $EndSheet
-$Comp
-L USB:UJ31-CH-3-SMT-TR U1
-U 1 1 5D3A6108
-P 2150 2050
-F 0 "U1" H 2483 2215 50  0000 C CNN
-F 1 "UJ31-CH-3-SMT-TR" H 2483 2124 50  0000 C CNN
-F 2 "USB:UJ31-Ch-3-SMT-TR" H 2200 2100 50  0001 C CNN
-F 3 "" H 2200 2100 50  0001 C CNN
-	1    2150 2050
-	1    0    0    -1  
-$EndComp
 $Sheet
 S 5550 3750 550  600 
 U 5D3A754A
@@ -214,102 +202,18 @@ $EndComp
 $Comp
 L power:GND #PWR01
 U 1 1 5D3D0D3A
-P 3000 5800
-F 0 "#PWR01" H 3000 5550 50  0001 C CNN
-F 1 "GND" H 3005 5627 50  0000 C CNN
-F 2 "" H 3000 5800 50  0001 C CNN
-F 3 "" H 3000 5800 50  0001 C CNN
-	1    3000 5800
+P 1750 5850
+F 0 "#PWR01" H 1750 5600 50  0001 C CNN
+F 1 "GND" H 1755 5677 50  0000 C CNN
+F 2 "" H 1750 5850 50  0001 C CNN
+F 3 "" H 1750 5850 50  0001 C CNN
+	1    1750 5850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2800 4650 3000 4650
-Wire Wire Line
-	3000 4650 3000 4750
-Wire Wire Line
-	2800 4750 3000 4750
-Connection ~ 3000 4750
-Wire Wire Line
-	3000 4750 3000 4850
-Wire Wire Line
-	2800 4850 3000 4850
-Connection ~ 3000 4850
-Wire Wire Line
-	3000 4850 3000 4950
-Wire Wire Line
-	2800 4950 3000 4950
-Connection ~ 3000 4950
-Wire Wire Line
-	3000 4950 3000 5150
-Wire Wire Line
-	2800 5150 3000 5150
-Connection ~ 3000 5150
-Wire Wire Line
-	3000 5150 3000 5250
-Wire Wire Line
-	2800 5250 3000 5250
-Connection ~ 3000 5250
-Wire Wire Line
-	3000 5250 3000 5350
-Wire Wire Line
-	2800 5350 3000 5350
-Connection ~ 3000 5350
-Wire Wire Line
-	3000 5350 3000 5450
-Wire Wire Line
-	2800 5450 3000 5450
-Connection ~ 3000 5450
-Wire Wire Line
-	3000 5450 3000 5800
-NoConn ~ 2800 3250
-NoConn ~ 2800 3350
-NoConn ~ 2800 3450
-NoConn ~ 2800 3550
-NoConn ~ 2800 3650
-NoConn ~ 2800 3750
-NoConn ~ 2800 3950
-NoConn ~ 2800 4050
-NoConn ~ 2800 4150
-NoConn ~ 2800 4250
-NoConn ~ 2800 4350
-NoConn ~ 2800 4450
-Wire Wire Line
-	2800 2650 3250 2650
-Wire Wire Line
-	2800 2750 3250 2750
-Wire Wire Line
-	2800 2950 3250 2950
-Wire Wire Line
-	2800 3050 3250 3050
-Text Label 3250 2650 2    50   ~ 0
+Text Label 2850 3350 2    50   ~ 0
 D-
-Text Label 3250 2950 2    50   ~ 0
-D-
-Text Label 3250 2750 2    50   ~ 0
-D+
-Text Label 3250 3050 2    50   ~ 0
-D+
-Wire Wire Line
-	3000 2450 2800 2450
-Wire Wire Line
-	2800 2350 3000 2350
-Connection ~ 3000 2350
-Wire Wire Line
-	3000 2350 3000 2450
-Wire Wire Line
-	2800 2250 3000 2250
-Connection ~ 3000 2250
-Wire Wire Line
-	3000 2250 3000 2350
-Wire Wire Line
-	2800 2150 3000 2150
-Wire Wire Line
-	3000 2150 3000 2250
 Wire Wire Line
 	3950 4000 3950 4650
-Wire Wire Line
-	3950 4650 3000 4650
-Connection ~ 3000 4650
 Wire Wire Line
 	3450 3400 3350 3400
 Wire Wire Line
@@ -526,9 +430,6 @@ D+
 Text Label 5300 4000 0    50   ~ 0
 D-
 Wire Wire Line
-	3250 2150 3000 2150
-Connection ~ 3000 2150
-Wire Wire Line
 	7000 2350 7000 2650
 Wire Wire Line
 	7400 2350 7400 2650
@@ -545,4 +446,48 @@ F 3 "~" H 7200 2650 50  0001 C CNN
 	1    7200 2650
 	1    0    0    -1  
 $EndComp
+$Comp
+L USB:HRO_TYPE-C-31-M-12 J2
+U 1 1 5F296665
+P 1750 3450
+F 0 "J2" H 1857 4317 50  0000 C CNN
+F 1 "HRO_TYPE-C-31-M-12" H 1857 4226 50  0000 C CNN
+F 2 "USB:HRO_TYPE-C-31-M-12" H 1900 4400 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1900 3450 50  0001 C CNN
+	1    1750 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 3350 2850 3350
+Wire Wire Line
+	2350 3450 2850 3450
+Wire Wire Line
+	2350 3550 2850 3550
+Wire Wire Line
+	2350 3650 2850 3650
+NoConn ~ 2350 3950
+NoConn ~ 2350 4050
+NoConn ~ 2350 3050
+NoConn ~ 2350 3150
+Text Label 2850 3450 2    50   ~ 0
+D-
+Text Label 2850 3550 2    50   ~ 0
+D+
+Text Label 2850 3650 2    50   ~ 0
+D+
+Wire Wire Line
+	2350 2850 2350 2150
+Wire Wire Line
+	2350 2150 3250 2150
+Wire Wire Line
+	1450 4350 1450 4650
+Wire Wire Line
+	1450 4650 1750 4650
+Wire Wire Line
+	1750 4350 1750 4650
+Connection ~ 1750 4650
+Wire Wire Line
+	1750 4650 1750 5850
+Wire Wire Line
+	3950 4650 1750 4650
 $EndSCHEMATC
