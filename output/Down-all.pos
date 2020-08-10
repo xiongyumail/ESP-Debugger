@@ -1,0 +1,32 @@
+### Module positions - created on Fri Aug  7 15:53:09 2020 ###
+### Printed by Pcbnew version kicad 5.1.6+dfsg1-1
+## Unit = mm, Angle = deg.
+## Side : All
+# Ref     Val                 Package                                   PosX       PosY       Rot  Side
+C1        10uF                C_0603_1608Metric                      -8.3000    14.1000  180.0000  bottom
+C2        1uF                 C_0603_1608Metric                      -8.3000    16.3000  180.0000  bottom
+C3        10uF                C_0603_1608Metric                      -8.4000    25.1000  180.0000  bottom
+C4        1uF                 C_0603_1608Metric                      -8.4000    27.2000  180.0000  bottom
+RN1       1K                  R_Array_Convex_4x0402                  -5.5000    26.2000   90.0000  bottom
+U4        AMS1117-LDO         SOT-223                                -5.5000    20.7000  180.0000  bottom
+C5        4.7uF               C_0402_1005Metric                       9.0000    17.0000   90.0000  top
+C6        1uF                 C_0402_1005Metric                       5.7000    12.9000  180.0000  top
+C7        0.1uF               C_0402_1005Metric                       2.6000    12.9000    0.0000  top
+C8        1uF                 C_0402_1005Metric                       2.1000    14.6000   90.0000  top
+D1        LED                 LED_0603_1608Metric                     8.1000    26.1000  270.0000  top
+D2        LED                 LED_0603_1608Metric                     9.7000    26.1000  270.0000  top
+D3        LED                 LED_0603_1608Metric                     1.2000    26.1000  270.0000  top
+D4        LED                 LED_0603_1608Metric                     2.8000    26.1000  270.0000  top
+D5        LED                 LED_0603_1608Metric                     8.4000    10.1000   90.0000  top
+F1        PPTC                Fuse_0805_2012Metric                    2.4000    10.0000  270.0000  top
+J2        HRO_TYPE-C-31-M-12  HRO_TYPE-C-31-M-12                      5.4610     2.6784    0.0000  top
+Q1        S9014               SOT-23                                  3.4000    22.2000   90.0000  top
+Q2        S9014               SOT-23                                  7.7000    22.2000   90.0000  top
+R1        10K                 R_0402_1005Metric                       8.5000    12.9000    0.0000  top
+R2        1K                  R_0402_1005Metric                       2.6000    19.6000  180.0000  top
+R3        1K                  R_0402_1005Metric                       8.5000    19.7000    0.0000  top
+R4        1K                  R_0402_1005Metric                       9.0000    14.6000   90.0000  top
+U2        SRV05-4             SOT-23-6                                5.5000    10.0000  180.0000  top
+U3        SRV05-4             SOT-23-6                                5.5000    26.1000  270.0000  top
+U5        CP2104              QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm     5.5450    16.2750    0.0000  top
+## End
