@@ -11,6 +11,8 @@ git clone --recursive https://github.com/xiongyumail/esp-debugger
 ![t4](output/t4.jpeg)
 ![Down](output/Down.png)
 ![Down1](output/Down1.png)
+![Down_cp_f](output/Down_cp_f.png)
+![Down_cp_b](output/Down_cp_b.png)
 
 ## Schematic
 

@@ -19,21 +19,21 @@ bom_input = []
 pos_input = []
 
 package_dict = {}
-
-package_dict['Resistors_SMD:R_0805_HandSoldering'] = '0805'
-package_dict['RESC1608X38'] = '0603'
+package_dict['LED_SMD:LED_0603_1608Metric'] = 'LED_0603'
+package_dict['Fuse:Fuse_0805_2012Metric'] = '0805'
 package_dict['Capacitor_SMD:C_0603_1608Metric'] = '0603'
-package_dict['Capacitor_SMD:C_0805_2012Metric'] = '0805'
-package_dict['Resistor_SMD:R_0603_1608Metric'] = '0603'
-package_dict['Inductor_SMD:L_0805_2012Metric'] = '0805'
-package_dict['LED_SMD:LED_0805_2012Metric'] = '0805'
-package_dict['INDC1608X95'] = '0603'
-package_dict['CAPC1608X90'] = '0603'
-package_dict['CAPC2012X90'] = '0805'
-package_dict['R_0402'] = '0402'
-package_dict['C_0402'] = '0402'
-package_dict['Capacitors_SMD:C_0805_HandSoldering'] = '0805'
-package_dict['INDC2012X130'] = '0805'
+package_dict['Capacitor_SMD:C_0402_1005Metric'] = '0402'
+package_dict['Resistor_SMD:R_0402_1005Metric'] = '0402'
+package_dict['Resistor_SMD:R_Array_Convex_4x0402'] = '0402_x4'
+package_dict['Package_TO_SOT_SMD:SOT-23-6'] = 'SOT-23-6'
+package_dict['Package_TO_SOT_SMD:SOT-223'] = 'SOT-223'
+package_dict['Package_TO_SOT_SMD:SOT-23'] = 'SOT-23-3'
+
+package_rot = {}
+package_rot['R_Array_Convex_4x0402'] = 270
+package_rot['SOT-23-6'] = 180
+package_rot['SOT-223'] = 0
+package_rot['SOT-23'] = 180
 
 with open(bom_input_filename, 'r') as csvfile:
     content = csv.DictReader(csvfile, delimiter=',', quotechar='"')
@@ -74,6 +74,11 @@ with open(pos_output_filename, 'w+') as csvfile:
     content = csv.DictWriter(csvfile, delimiter=',', lineterminator='\n', fieldnames=pos_output_field)
     content.writeheader()
     for row in pos_input:
+        p = row['Package']
+        if package_rot.has_key(p):
+            rot = float(row['Rot']) + package_rot[p]
+        else:
+            rot = row['Rot']
         newrow = {
             'Designator'    : row['Ref'],
             'Footprint'     : row['Package'],
@@ -81,7 +86,7 @@ with open(pos_output_filename, 'w+') as csvfile:
             'Mid Y'         : row['PosY']+'mm',
             'Ref X': '','Ref Y':'','Pad X':'','Pad Y':'',
             'Layer'         : Layers[row['Side']],
-            'Rotation'      : row['Rot'],
+            'Rotation'      : rot,
             'Comment'       : row['Val']
             }
         content.writerow(newrow)
